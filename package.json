@@ -2,7 +2,7 @@
   "name": "react",
   "version": "1.0.0",
   "description": "this the react playground and used for learners",
-  "main": "App.js",
+  
   "scripts": {
     "test": "jest"
   },
@@ -27,5 +27,14 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
-  }
+  },
+
+
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not op_mini all",
+    "chrome"
+  ]
+
 }
