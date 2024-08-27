@@ -20,12 +20,15 @@ const parent= React.createElement(
     {id:"parent"},
     React.createElement(
         "div",
-        {id:"child"}),
+        {id:"child"}),[
 
         React.createElement(
             "h1",
             {},
-        "---Nested Header accessed from the react and it is working ---")
+        "---Nested Header accessed from the react and it is working ---"),React.createElement(
+            "h2",
+            {},
+        "###Nested Header accessed  H2 @ using arrays from the react and it is working ###")]
 )
 
 
