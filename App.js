@@ -86,13 +86,24 @@ const Header =() =>{
 
 
 // Create another functional component --> body
+// create a component for the restaurent cards which will composited in body
 
+const Restcomp=()=>{
+
+return(
+<div className="restaurant-card">
+  <h3>Pizza-Hut</h3>
+  </div>);
+
+}
 const Body=()=>{
 
 return(
   <div className="Body">
     <div className="Search">Search</div>
-    <div className="rest-container"></div>
+    <div className="rest-container">
+      <Restcomp />
+      </div>
   </div>
 );
 
@@ -107,7 +118,7 @@ const AppLayout=() =>
   return (
     <div class= "app">
 <Header/>
-
+<Body/>
     </div>
   )
 }
