@@ -52,8 +52,10 @@ const parent = (
 
 const functional_component=() =>
 (
+   
 
-        <div><h1>@@@ functional component driven line---</h1></div>
+        <div> <h2>{100+111}</h2>
+            <h1>@@@ functional component driven line---</h1></div>
 );
 
 
