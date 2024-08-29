@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 
 
 // Create the heading element
-const heading = React.createElement("h1", { id: "heading" }, "Hello World, React!");
+// const heading = React.createElement("h1", { id: "heading" }, "Hello World, React!");
 
 
 
@@ -38,25 +38,79 @@ React.creatElement takes three arguments
 //             {},
 //         "###Nested Header accessed  H2 @ using arrays from the react and it is working ###")]
 // )
-const parent = (
-    <div id="parent">
-      <div id="child">
-        <h1>---Nested Header accessed from the react and it is working---</h1>
-        <h2>###Nested Header accessed H2 @ using arrays from the react and it is working ###</h2>
-      </div>
-    </div>
-  );
+// const parent = (
+//     <div id="parent">
+//       <div id="child">
+//         <h1>---Nested Header accessed from the react and it is working---</h1>
+//         <h2>###Nested Header accessed H2 @ using arrays from the react and it is working ###</h2>
+//       </div>
+//     </div>
+//   );
   
 
 
 
-const functional_component=() =>
-(
+// const functional_component=() =>
+// (
    
 
-        <div> <h2>{100+111}</h2>
-            <h1>@@@ functional component driven line---</h1></div>
+//         <div> <h2>{100+111}</h2>
+//             <h1>@@@ functional component driven line---</h1></div>
+// );
+
+
+
+
+// react app -->swiggy
+const Header =() =>{
+  return (
+<div className="header">  {/* Updated className to match the CSS */}
+      <div>
+        <img
+          className="logo"
+          src="https://logonoid.com/images/pizza-pizza-logo.png"
+          alt="Pizza Logo"
+        />
+      </div>
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact Us</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+)
+}
+
+
+// Create another functional component --> body
+
+const Body=()=>{
+
+return(
+  <div className="Body">
+    <div className="Search">Search</div>
+    <div className="rest-container"></div>
+  </div>
 );
+
+
+
+
+};
+
+
+const AppLayout=() =>
+{
+  return (
+    <div class= "app">
+<Header/>
+
+    </div>
+  )
+}
 
 
 
@@ -67,11 +121,6 @@ const functional_component=() =>
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Render the heading element inside the root
-root.render(
-    <div>
-        {parent}
-        {functional_component()}
-    </div>
-);
+root.render(<AppLayout/>);
 
 
