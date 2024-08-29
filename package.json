@@ -31,10 +31,14 @@
 
 
   "browserslist": [
-    ">0.2%",
+    "last 2 versions",
     "not dead",
-    "not op_mini all",
-    "chrome"
+    "Chrome >= 60",
+    "Firefox >= 60",
+    "Safari >= 10.1",
+    "Edge >= 17",
+    "iOS >= 10.3",
+    "not op_mini all"
   ]
 
 }
