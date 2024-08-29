@@ -50,7 +50,11 @@ const parent = (
 
 
 
+const functional_component=() =>
+(
 
+        <div><h1>@@@ functional component driven line---</h1></div>
+);
 
 
 
@@ -61,5 +65,11 @@ const parent = (
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Render the heading element inside the root
-root.render(parent);
+root.render(
+    <div>
+        {parent}
+        {functional_component()}
+    </div>
+);
+
 
