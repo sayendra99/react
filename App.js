@@ -92,7 +92,11 @@ const Restcomp=()=>{
 
 return(
 <div className="restaurant-card">
-  <h3>Pizza-Hut</h3>
+ <h3>Pizza-Hut</h3>
+  <img className="card-img" src="https://tb-static.uber.com/prod/image-proc/processed_images/0a59c36193251022e816ffec42d9870d/30be7d11a3ed6f6183354d1933fbb6c7.jpeg"></img>
+  <h4 className="Card-items">BiG Dipper Box  , Cinnamon sticks  , Stuffed Crust  , Supreme Pan with butter garlic crust </h4>
+  <h4>Rating 4/5</h4>
+  <h4>25min</h4>
   </div>);
 
 }
@@ -102,6 +106,17 @@ return(
   <div className="Body">
     <div className="Search">Search</div>
     <div className="rest-container">
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
+      <Restcomp />
       <Restcomp />
       </div>
   </div>
