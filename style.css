@@ -2,10 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center; /* Vertically align items */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    
     
 }
-
+.header:hover{
+    background-color: #f1f1f1; /* Light gray background on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+    background-color: aquamarine;
+}
 .logo {
     width: 200px;
     
@@ -34,7 +41,49 @@
 
 .restaurant-card{
    
-    width: 200px;
-    height: 50px;
-    border: 1px solid black;
+    width: 300px;
+    height: 340px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.restaurant-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 15px rgba(106, 58, 58, 0.2); /* Deeper shadow on hover */
+    cursor:grabbing;
+
+  
+}
+
+
+
+.Search{
+    padding: 10px;
+}
+
+.card-img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.restaurant-card h4 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #555;
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+
+
+.rest-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
