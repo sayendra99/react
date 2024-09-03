@@ -92,7 +92,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"Pizza-Hut",
     Items:["Big Dipper Box", "Cinnamon sticks", "Stuffed Crust", "Supreme Pan with butter garlic crust","Pan Pizza","Bread Bites", "Buffalo Chicken"],
     prep_time: "25min",
@@ -104,7 +104,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"Dominos",
     Items:["Pepperoni Pizza", "Cheese Burst Pizza", "Choco Lava Cake", "Garlic Bread", "Chicken Wings"],
     prep_time: "20min",
@@ -116,7 +116,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"Taco-Bell",
     Items:[
       "Crunchy Taco",
@@ -136,7 +136,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"Mc_Donald",
     Items:[
       "Big Mac",
@@ -159,7 +159,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"Casey's",
     Items:[
       "Casey's Classic Pizza",
@@ -182,7 +182,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"Hangers",
     Items:[
       "Hangar 1 Classic Burger",
@@ -205,7 +205,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"Pizza Ranch",
     Items:[
       "Buffet Pizza",
@@ -228,7 +228,7 @@ const rest_data=[
   {
     city: "Maryville",
     state:"MO",
-    review:4.5 / 5,
+    review:4.5,
     rest_name:"A & G",
     Items:[
       "A&G Special Pizza",
