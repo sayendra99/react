@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
+import Restcomp from "./components/Restcomp";
 
 
 
@@ -264,20 +265,20 @@ const rest_data=[
 // Create another functional component --> body
 // create a component for the restaurent cards which will composited in body
 
-const Restcomp=(props)=>{
+// const Restcomp=(props)=>{
 
 
 
-return(
-<div className="restaurant-card">
-<h3>{props.rest_name}</h3>
-      <img className="card-img" src={props.img_link} alt={props.rest_name} />
-      <h4 className="Card-items">{props.Items.join(", ")}</h4>
-      <h4>Rating: {props.review}</h4>
-      <h4>Preparation Time: {props.prep_time}</h4>
-  </div>);
+// return(
+// <div className="restaurant-card">
+// <h3>{props.rest_name}</h3>
+//       <img className="card-img" src={props.img_link} alt={props.rest_name} />
+//       <h4 className="Card-items">{props.Items.join(", ")}</h4>
+//       <h4>Rating: {props.review}</h4>
+//       <h4>Preparation Time: {props.prep_time}</h4>
+//   </div>);
 
-}
+// }
 // const Body=()=>{
 
 // return(
