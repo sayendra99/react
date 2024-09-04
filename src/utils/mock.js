@@ -3,7 +3,7 @@ const rest_data=[
     {
       city: "Maryville",
       state:"MO",
-      review:4.5,
+      review:3.0,
       rest_name:"Pizza-Hut",
       Items:["Big Dipper Box", "Cinnamon sticks", "Stuffed Crust", "Supreme Pan with butter garlic crust","Pan Pizza","Bread Bites", "Buffalo Chicken"],
       prep_time: "25min",
@@ -27,7 +27,7 @@ const rest_data=[
     {
       city: "Maryville",
       state:"MO",
-      review:4.5,
+      review:3.5,
       rest_name:"Taco-Bell",
       Items:[
         "Crunchy Taco",
@@ -93,7 +93,7 @@ const rest_data=[
     {
       city: "Maryville",
       state:"MO",
-      review:4.5,
+      review:4.0,
       rest_name:"Hangers",
       Items:[
         "Hangar 1 Classic Burger",
