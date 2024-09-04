@@ -102,3 +102,20 @@
     align-items: center;
     padding: 10px;
 }
+
+.filter-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .filter-button:hover {
+    background-color: #e55d00;
+  }
+  
+  
