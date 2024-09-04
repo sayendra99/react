@@ -1,10 +1,12 @@
+
+import { logoUrl } from "../utils/contants";
 const Header =() =>{
     return (
   <div className="header">  {/* Updated className to match the CSS */}
         <div>
           <img
             className="logo"
-            src="https://logonoid.com/images/pizza-pizza-logo.png"
+            src={logoUrl}
             alt="Pizza Logo"
           />
         </div>
