@@ -108,10 +108,11 @@
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    background-color: #ff6600;
+    background-color: #2400c3;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 20px; 
   }
   
   .filter-button:hover {
