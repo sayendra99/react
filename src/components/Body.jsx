@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Restcomp from "./Restcomp";
 import rest_data from "../utils/mock";
 
 const Body = () => {
   // Initialize state with the full list of restaurants
   const [restaurants, setRestaurants] = useState(rest_data);
+
+// let us  use another Hook UseHook , 
+
+useEffect(()=>{ apifun();},[]);
+
+const apifun=()=>{
+const data= fetch();
+}
+
 
   // Function to filter the top restaurants based on a condition (e.g., review > 3.5)
   const filterTopRestaurants = () => {
@@ -14,6 +23,7 @@ const Body = () => {
 
   return (
     <div className="Body">
+    
       <div className="Filter">
         <button className="filter-button" onClick={filterTopRestaurants}>
           Top Restaurants
