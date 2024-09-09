@@ -2,9 +2,10 @@
   "name": "react",
   "version": "1.0.0",
   "description": "this the react playground and used for learners",
-  
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "react-scripts start"
+   
   },
   "repository": {
     "type": "git",
@@ -25,11 +26,11 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-scripts": "^3.0.1"
   },
-
-
   "browserslist": [
     "last 2 versions",
     "not dead",
@@ -40,5 +41,4 @@
     "iOS >= 10.3",
     "not op_mini all"
   ]
-
 }
