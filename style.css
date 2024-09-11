@@ -149,3 +149,14 @@
     }
   }
   
+
+  .log-btn {
+    background-color: #ab3a7fbd; /* Blue background for the button */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Add padding for a better look */
+    font-size: 16px; /* Adjust font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
