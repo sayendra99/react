@@ -1,205 +1,173 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Vertically align items */
-    /* border: 1px solid blue; */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    
-    
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically align items */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.header:hover{
-    background-color: #f1f1f1; /* Light gray background on hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
-    background-color: aquamarine;
+
+.header:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
 }
+
 .logo {
-    width: 200px;
-    
+  width: 200px;
 }
-
-/* to push nav items from left to rigth  use it*/
-
 
 .nav-items > ul {
-    display: flex;
-    list-style-type: none;
-    margin:0; /* Remove default margin */
-    padding:10px 20px; /* Remove default padding */
-    font-size: 23px;
-   
-    font-family: cursive;
-    font-display: 4px;
-  
+  display: flex;
+  list-style-type: none;
+  margin: 0; /* Remove default margin */
+  padding: 10px 20px; /* Remove default padding */
+  font-size: 23px;
+  font-family: cursive;
+  font-display: 4px;
 }
 
 .nav-items > ul > li {
-    padding: 10px;
-    margin: 10px;
-}
-
-
-.restaurant-card{
-   
-    width: 300px;
-    height: 340px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 20px;
-    background-color: #fff;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    
-}
-.restaurant-card:hover {
-    transform: translateY(-5px); /* Slight lift effect */
-    box-shadow: 0 8px 15px rgba(106, 58, 58, 0.2); /* Deeper shadow on hover */
-    cursor:grabbing;
-    border: 1px solid #04b81f; /* Default border color */
-  border-radius: 8px; /* Rounded corners */
-
-  
-}
-
-
-
-.Search{
-    padding: 10px;
-}
-
-.card-img{
-    width: 100%;
-    height: 150px;
-    object-fit: cover; /* Ensures the image covers the area without distortion */
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.restaurant-card h4 {
-    font-size: 16px;
-    font-weight: normal;
-    color: #555;
-    margin: 5px 0;
-    line-height: 1.5;
-}
-
-
-
-.rest-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  padding: 10px;
+  margin: 10px;
 }
 
 .restaurant-card {
-    width: 370px;
-    min-height: 400px; /* Ensures the card grows with content */
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 20px;
-    background-color: #fdfffd;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
+  width: 370px;
+  min-height: 400px; /* Ensures the card grows with content */
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #fdfffd;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+  box-shadow: 0 8px 15px rgba(106, 58, 58, 0.2); /* Deeper shadow on hover */
+  cursor: grabbing;
+  border: 1px solid #04b81f; /* Default border color */
+  border-radius: 8px; /* Rounded corners */
+}
+
+.Search {
+  padding: 10px;
+}
+
+.card-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.restaurant-card h4 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #555;
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.rest-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .filter-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #2400c3;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px; 
-  }
-  
-  .filter-button:hover {
-    background-color: #e55d00;
-  }
-  
-  .shimmer-wrapper {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .shimmer-card {
-    width: 300px;
-    height: 200px;
-    background: #f6f7f8;
-    background-image: linear-gradient(
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2400c3;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.filter-button:hover {
+  background-color: #e55d00;
+}
+
+.shimmer-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.shimmer-card {
+  width: 300px;
+  height: 200px;
+  background: #f6f7f8;
+  background-image: linear-gradient(
       to right,
       #f6f7f8 0%,
       #edeef1 20%,
       #f6f7f8 40%,
       #f6f7f8 100%
-    );
-    background-repeat: no-repeat;
-    background-size: 800px 200px;
-    animation: shimmer 1.5s infinite linear;
-  }
-  
-  @keyframes shimmer {
-    0% {
+  );
+  background-repeat: no-repeat;
+  background-size: 800px 200px;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
       background-position: -800px 0;
-    }
-    100% {
+  }
+  100% {
       background-position: 800px 0;
-    }
   }
-  
+}
 
-  .log-btn {
-    background-color: #ab3a7fbd; /* Blue background for the button */
-    color: #ffffff; /* White text color */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Add padding for a better look */
-    font-size: 16px; /* Adjust font size */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-  }
-  .Filter{ display: flex;}
+.log-btn {
+  background-color: #ab3a7fbd; /* Blue background for the button */
+  color: #ffffff; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding for a better look */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
 
+.Filter {
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Space between elements */
+}
 
-  .Search_Btn {
-    display: flex;
-    align-items: center; /* Vertically center items */
-    gap: 0px; /* Space between input and button */
-  
-  }
-  
-  .Input_btn {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px; /* Adjust the width as needed */
-   
-  
-    font-size: 16px;
-  }
-  
-  .inp_Btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    background-color: #406892;
-    color: #ffffff;
-    cursor: pointer;
-    margin: 45px;
+.Search_Btn {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  gap: 10px; /* Space between input and button */
+}
 
-    font-size: 16px;
-    transition: background-color 0.3s ease; /* Smooth color transition on hover */
-  }
-  
-  .inp_Btn:hover {
-    background-color: #aadf40; /* Darker shade on hover */
-  }
-  
-  .filter-button{
-    height: auto;
-  }
+.Input_btn {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px; /* Adjust the width as needed */
+  font-size: 16px;
+}
+
+.inp_Btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #406892;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.inp_Btn:hover {
+  background-color: #aadf40; /* Darker shade on hover */
+}
