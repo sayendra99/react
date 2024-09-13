@@ -16,4 +16,13 @@ const Shimmer = () => {
   );
 };
 
+const NoResults = () => {
+  return (
+    <div className="no-results">
+    <img src="/path/to/no-results-image.png" alt="No results found" className="no-results-image" />
+    <p>No results found.</p>
+  </div>
+  );
+};
+
 export default Shimmer;
