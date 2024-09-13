@@ -4,47 +4,75 @@ import Shimmer from "./Shimmer"; // Import Shimmer component
 import rest_data from "../utils/mock";
 
 const Body = () => {
+  // State for storing all restaurants and filtered results
   const [restaurants, setRestaurants] = useState([]);
-  const [loading, setLoading] = useState(true); // State to manage loading
+  // State for managing loading state
+  const [loading, setLoading] = useState(true);
+  // State for search input text
+  const [searchText, setSearchText] = useState("");
+  // State for storing all restaurants for reset
+  const [allRestaurants, setAllRestaurants] = useState([]);
 
   useEffect(() => {
     // Simulate an API call
     setTimeout(() => {
-      setRestaurants(rest_data);
+      setRestaurants(rest_data); // Initialize restaurants with mock data
+      setAllRestaurants(rest_data); // Save all restaurants for reset
       setLoading(false); // Set loading to false once data is fetched
     }, 2000); // Simulating a delay for loading
   }, []);
 
-  // Function to filter the top restaurants based on a condition (e.g., review > 3.5)
+  // Function to handle search
+  const searchRestaurants = () => {
+    const filteredList = allRestaurants.filter((res) =>
+      res.rest_name.toLowerCase().includes(searchText.toLowerCase())
+    );
+    setRestaurants(filteredList); // Update state with the filtered list
+  };
+
+  // Function to filter top restaurants based on review
   const filterTopRestaurants = () => {
-    const filtered_list = restaurants.filter((res) => res.review > 3.5);
-    setRestaurants(filtered_list); // Update state with the filtered list
+    const filteredList = allRestaurants.filter((res) => res.review > 3.5);
+    setRestaurants(filteredList); // Update state with the filtered list
+  };
+
+  // Handle key down event
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      searchRestaurants(); // Trigger search when Enter key is pressed
+    }
   };
 
   return (
     <div className="Body">
       <div className="Filter">
-      <div className="Search_Btn">
-  <input type="text" className="Input_btn" />
-  <button className="inp_Btn">Search</button>
-</div>
-
-
+        <div className="Search_Btn">
+          <input
+            type="text"
+            className="Input_btn"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            onKeyDown={handleKeyDown} // Add key down handler
+            placeholder="Search for restaurants..."
+          />
+          <button className="inp_Btn" onClick={searchRestaurants}>
+            Search
+          </button>
+        </div>
 
         <button className="filter-button" onClick={filterTopRestaurants}>
           Top Restaurants
         </button>
 
-       
-       
+        <button className="filter-button" onClick={() => setRestaurants(allRestaurants)}>
+          All Restaurants
+        </button>
       </div>
 
       <div className="rest-container">
         {loading ? (
-          // Show shimmer effect while loading is true
-          <Shimmer />
+          <Shimmer /> // Show shimmer effect while loading
         ) : (
-          // Render restaurant components once loading is complete
           restaurants.map((restaurant, index) => (
             <Restcomp
               key={index}
