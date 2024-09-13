@@ -64,7 +64,7 @@ const Body = () => {
           Top Restaurants
         </button>
 
-        <button className="filter-button" onClick={() => setRestaurants(allRestaurants)}>
+        <button className="Wfilter-button" onClick={() => setRestaurants(allRestaurants)}>
           All Restaurants
         </button>
       </div>
