@@ -24,9 +24,19 @@ const Body = () => {
   return (
     <div className="Body">
       <div className="Filter">
+      <div className="Search_Btn">
+  <input type="text" className="Input_btn" />
+  <button className="inp_Btn">Search</button>
+</div>
+
+
+
         <button className="filter-button" onClick={filterTopRestaurants}>
           Top Restaurants
         </button>
+
+       
+       
       </div>
 
       <div className="rest-container">
