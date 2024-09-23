@@ -9,7 +9,7 @@ import { createBrowserRouter ,RouterProvider} from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
-
+import Error from "./components/Error";
 // Create the heading element
 // const heading = React.createElement("h1", { id: "heading" }, "Hello World, React!");
 
@@ -323,13 +323,13 @@ const AppLayout=() =>
 const appRouter=createBrowserRouter
 (
   [ // sample path for routing to home layout
-    {path:"/",element:<AppLayout />},
+    {path:"/",element:<AppLayout />,errorElement:<Error/>},
     //path for routing to about
-    {path:"/About",element:<About />},
+    {path:"/About",element:<About />,errorElement:<Error/>},
     
-    {path:"/Home",element:<Home />},
+    {path:"/Home",element:<Home />,errorElement:<Error/>},
 
-    {path:"/Contact",element:<Contact/>}
+    {path:"/Contact",element:<Contact/>,errorElement:<Error/>}
 
 
   ]
