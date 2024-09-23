@@ -71,7 +71,7 @@ const Body = () => {
 
       <div className="rest-container">
         {loading ? (
-          <Shimmer /> // Show shimmer effect while loading
+          <Shimmer />
         ) : (
           restaurants.map((restaurant, index) => (
             <Restcomp
