@@ -5,7 +5,6 @@
   "scripts": {
     "test": "jest",
     "start": "react-scripts start"
-   
   },
   "repository": {
     "type": "git",
