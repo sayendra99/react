@@ -5,8 +5,10 @@ import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Restcomp from "./components/Restcomp";
-
-
+import { createBrowserRouter } from "react-router-dom";
+import Home from "./components/Home";
+import Contact from "./components/Contact";
+import About from "./components/About";
 
 // Create the heading element
 // const heading = React.createElement("h1", { id: "heading" }, "Hello World, React!");
@@ -316,7 +318,22 @@ const AppLayout=() =>
   )
 }
 
+// app router configurations
 
+const appRouter=createBrowserRouter
+(
+  [ // sample path for routing to home layout
+    {path:"/",element:<AppLayout />},
+    //path for routing to about
+    {path:"/About",element:<About />},
+    
+    {path:"/Home",element:<Home />},
+
+    {path:"/Contact",element:<Contact/>}
+
+
+  ]
+);
 
 
 
