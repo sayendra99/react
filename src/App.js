@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Restcomp from "./components/Restcomp";
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter ,RouterProvider} from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -342,6 +342,6 @@ const appRouter=createBrowserRouter
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // Render the heading element inside the root
-root.render(<AppLayout/>);
+root.render(<RouterProvider router={appRouter}/>);
 
 
