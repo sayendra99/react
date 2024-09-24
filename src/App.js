@@ -5,7 +5,7 @@ import ReactDOM from "react-dom";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import Restcomp from "./components/Restcomp";
-import { createBrowserRouter ,RouterProvider} from "react-router-dom";
+import { createBrowserRouter ,RouterProvider,Outlet} from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
@@ -323,14 +323,17 @@ const AppLayout=() =>
 const appRouter=createBrowserRouter
 (
   [ // sample path for routing to home layout
-    {path:"/",element:<AppLayout />,errorElement:<Error/>},
-    //path for routing to about
-    {path:"/About",element:<About />,errorElement:<Error/>},
+    {path:"/",element:<AppLayout />,
+      
+      children:[ {path:"/About",element:<About />,errorElement:<Error/>},
     
-    {path:"/Home",element:<Home />,errorElement:<Error/>},
-
-    {path:"/Contact",element:<Contact/>,errorElement:<Error/>}
-
+        {path:"/Home",element:<Home />,errorElement:<Error/>},
+    
+        {path:"/Contact",element:<Contact/>,errorElement:<Error/>}
+    ],
+      errorElement:<Error/>},
+    //path for routing to about
+  
 
   ]
 );
@@ -341,7 +344,7 @@ const appRouter=createBrowserRouter
 // Select the root element and create a root container with React 18
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// Render the heading element inside the root
+// Render the heading element inside the root ---> routerProvider 
 root.render(<RouterProvider router={appRouter}/>);
 
 
