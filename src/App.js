@@ -314,29 +314,58 @@ const AppLayout=() =>
     <div class= "app">
 <Header/>
 <Body/>
+<Outlet/>
     </div>
   )
 }
 
 // app router configurations
 
-const appRouter=createBrowserRouter
-(
-  [ // sample path for routing to home layout
-    {path:"/",element:<AppLayout />,
-      
-      children:[ {path:"/About",element:<About />,errorElement:<Error/>},
-    
-        {path:"/Home",element:<Home />,errorElement:<Error/>},
-    
-        {path:"/Contact",element:<Contact/>,errorElement:<Error/>}
-    ],
-      errorElement:<Error/>},
-    //path for routing to about
-  
+// const appRouter = createBrowserRouter([
+//   {
+//     path: "/",
+//     element: <AppLayout />,
+//     children: [
+//        // Home as the default child route
+//       { path: "about", element: <About /> },
+//       { path: "contact", element: <Contact /> },
+//     ],
+//     errorElement: <Error />,
+//   },
+// ]);
 
-  ]
-);
+const appRouter = createBrowserRouter([
+  { 
+    path: "/", 
+    element: (
+      <div>
+        <AppLayout /> 
+        <Body />  {/* Render Body on the root path */}
+      </div>
+    ), 
+    errorElement: <Error /> 
+  },
+  {
+    path: "about",
+    element: (
+      <div>
+        <AppLayout />
+        <About /> {/* Render About when navigating to "/about" */}
+      </div>
+    ),
+    errorElement: <Error />
+  },
+  {
+    path: "contact",
+    element: (
+      <div>
+        <AppLayout />
+        <Contact /> {/* Render Contact when navigating to "/contact" */}
+      </div>
+    ),
+    errorElement: <Error />
+  }
+]);
 
 
 
