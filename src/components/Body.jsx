@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Restcomp from "./Restcomp";
 import Shimmer from "./Shimmer"; // Import Shimmer component
-import rest_data from "../utils/mock";
+import rest_data from "../utils/mock"; // Mock restaurant data
+import SelectedRestaurant from "./SelectedRestaurant"; // Component to show selected restaurant details
 
 const Body = () => {
   // State for storing all restaurants and filtered results
@@ -10,8 +11,10 @@ const Body = () => {
   const [loading, setLoading] = useState(true);
   // State for search input text
   const [searchText, setSearchText] = useState("");
-  // State for storing all restaurants for reset
+  // State for storing all restaurants for reset  
   const [allRestaurants, setAllRestaurants] = useState([]);
+  // State for storing the selected restaurant data
+  const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
   useEffect(() => {
     // Simulate an API call
@@ -41,6 +44,11 @@ const Body = () => {
     if (e.key === 'Enter') {
       searchRestaurants(); // Trigger search when Enter key is pressed
     }
+  };
+
+  // Handle selecting a restaurant
+  const handleSelectRestaurant = (restaurant) => {
+    setSelectedRestaurant(restaurant); // Set the selected restaurant state
   };
 
   return (
@@ -81,10 +89,18 @@ const Body = () => {
               Items={restaurant.Items}
               review={restaurant.review}
               prep_time={restaurant.prep_time}
+              onSelect={handleSelectRestaurant} // Pass the select handler to Restcomp
             />
           ))
         )}
       </div>
+      
+      {/* Render the SelectedRestaurant component if a restaurant is selected */}
+      {selectedRestaurant ? (
+        <SelectedRestaurant restaurant={selectedRestaurant} />
+      ) : (
+        <p>Please select a restaurant to see details.</p> // Message when no restaurant is selected
+      )}
     </div>
   );
 };
