@@ -1,18 +1,54 @@
 
+// Create the heading element
+// const heading = React.createElement("h1", { id: "heading" }, "Hello World, React!");
+
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 import Header from "./components/Header";
 import Body from "./components/Body";
-import Restcomp from "./components/Restcomp";
-import { createBrowserRouter ,RouterProvider,Outlet} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Error from "./components/Error";
-// Create the heading element
-// const heading = React.createElement("h1", { id: "heading" }, "Hello World, React!");
 
+// App Layout Component
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Outlet /> {/* Outlet for rendering nested routes */}
+    </div>
+  );
+};
+
+// Router configuration
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    errorElement: <Error />, // Catch all for invalid routes
+    children: [
+      {
+        path: "", // Default path to render for "/"
+        element: <Body />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
+  },
+]);
+
+// Render the RouterProvider
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<RouterProvider router={appRouter} />);
 
 
 /* 
@@ -308,16 +344,16 @@ React.creatElement takes three arguments
 // };
 
 
-const AppLayout=() =>
-{
-  return (
-    <div class= "app">
-<Header/>
-<Body/>
-<Outlet/>
-    </div>
-  )
-}
+// const AppLayout=() =>
+// {
+//   return (
+//     <div class= "app">
+// <Header/>
+// <Body/>
+// <Outlet/>
+//     </div>
+//   )
+// }
 
 // app router configurations
 
@@ -334,34 +370,34 @@ const AppLayout=() =>
 //   },
 // ]);
 
-const appRouter = createBrowserRouter([{
-  path: "/", 
-    element: <AppLayout />, 
-    errorElement: <Error />,
-    children: [
-      {
-        index: true, // This means it will render for the "/" route
-        element: <Body /> // Render Body for the root path
-      },
-      {
-        path: "about",
-        element: <About />, // Render About when navigating to "/about"
-      },
-      {
-        path: "contact",
-        element: <Contact />, // Render Contact when navigating to "/contact"
-      },
-    ]
-}
-]);
+// const appRouter = createBrowserRouter([{
+//   path: "/", 
+//     element: <AppLayout />, 
+    
+//     children: [
+//       {
+//      // This means it will render for the "/" route
+//         element: <Body /> // Render Body for the root path
+//       },
+//       {
+//         path: "about",
+//         element: <About />, // Render About when navigating to "/about"
+//       },
+//       {
+//         path: "contact",
+//         element: <Contact />, // Render Contact when navigating to "/contact"
+//       },
+//     ]
+// }
+// ]);
 
 
 
 
-// Select the root element and create a root container with React 18
-const root = ReactDOM.createRoot(document.getElementById("root"));
+// // Select the root element and create a root container with React 18
+// const root = ReactDOM.createRoot(document.getElementById("root"));
 
-// Render the heading element inside the root ---> routerProvider 
-root.render(<RouterProvider router={appRouter}/>);
+// // Render the heading element inside the root ---> routerProvider 
+// root.render(<RouterProvider router={appRouter}/>);
 
 
