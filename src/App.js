@@ -334,37 +334,25 @@ const AppLayout=() =>
 //   },
 // ]);
 
-const appRouter = createBrowserRouter([
-  { 
-    path: "/", 
-    element: (
-      <div>
-        <AppLayout /> 
-        <Body />  {/* Render Body on the root path */}
-      </div>
-    ), 
-    errorElement: <Error /> 
-  },
-  {
-    path: "about",
-    element: (
-      <div>
-        <AppLayout />
-        <About /> {/* Render About when navigating to "/about" */}
-      </div>
-    ),
-    errorElement: <Error />
-  },
-  {
-    path: "contact",
-    element: (
-      <div>
-        <AppLayout />
-        <Contact /> {/* Render Contact when navigating to "/contact" */}
-      </div>
-    ),
-    errorElement: <Error />
-  }
+const appRouter = createBrowserRouter([{
+  path: "/", 
+    element: <AppLayout />, 
+    errorElement: <Error />,
+    children: [
+      {
+        index: true, // This means it will render for the "/" route
+        element: <Body /> // Render Body for the root path
+      },
+      {
+        path: "about",
+        element: <About />, // Render About when navigating to "/about"
+      },
+      {
+        path: "contact",
+        element: <Contact />, // Render Contact when navigating to "/contact"
+      },
+    ]
+}
 ]);
 
 
