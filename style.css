@@ -189,3 +189,70 @@
 .Wfilter-button:hover {
   background-color: #c5de08;
 }
+
+
+/* Main container for the user card */
+.User-class {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* For the tick mark positioning */
+}
+
+/* Add padding and align text inside */
+.User-class h1,
+.User-class h2,
+.User-class h3,
+.User-class h4 {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+/* Style for the Count (give it a bold, vibrant look) */
+.User-class h1 {
+  color: #ff5722;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Styling the Name with a professional feel */
+.User-class h2 {
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Email styling */
+.User-class h3 {
+  color: #666;
+  font-size: 16px;
+  font-style: italic;
+}
+
+/* Location styling */
+.User-class h4 {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Hover effect: the card slightly lifts when hovered */
+.User-class:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a tick mark to indicate 'Approved' */
+.User-class::after {
+  content: "✔ Approved";
+  color: #28a745;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
