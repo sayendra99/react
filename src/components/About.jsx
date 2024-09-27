@@ -6,7 +6,10 @@ const About=()=>
         return(
         <div>
         <UserClass
+
+        
         //props passing
+
         Count={5} 
         Name="John Doe" 
         Email="john.doe@example.com" 
