@@ -4,33 +4,33 @@ class UserClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        likeStatus: "Like", // Initial like status
-      };
+      liked: false, // State to track whether the button is clicked
+    };
+
+    this.handleLikeClick = this.handleLikeClick.bind(this);
   }
 
-
-
-
-  // State will be maintained in object form , we dont need to create more object for each state  just declare in side of state object {-->Beast}
-
-  
+  // Function to handle like button click
+  handleLikeClick() {
+    this.setState((prevState) => ({
+      liked: !prevState.liked, // Toggle liked state
+    }));
+  }
 
   render() {
     // Destructure the props object to extract the required properties
     const { Count, Name, Email, Location } = this.props;
-    const { likeStatus } = this.state;
+    const { liked } = this.state; // Destructure 'liked' state
 
     // The return statement should be followed directly by the JSX block
     return (
       <div className="User-class">
-
-<button className="like-button" onClick={this.handleLikeClick}>
-          {likeStatus} ❤️
+        <button className="like-button" onClick={this.handleLikeClick}>
+          {liked ? "Liked ❤️" : "Like ♡"} {/* Change text and icon based on liked state */}
         </button>
 
-
         <h1>Count: {Count}</h1>
-        <h2>Name: {Name}</h2> {/* Corrected the typo from Namw to Name */}
+        <h2>Name: {Name}</h2>
         <h3>Email: {Email}</h3>
         <h4>Location: {Location}</h4>
       </div>
