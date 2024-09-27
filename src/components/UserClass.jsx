@@ -13,7 +13,7 @@ class UserClass extends React.Component {
   // Function to handle like button click
   handleLikeClick() {
     this.setState((prevState) => ({
-      liked: !prevState.liked, // Toggle liked state
+      liked: !prevState.liked, // Toggle liked state ---> State variable will be changes in this practise only never try to do stae=stae+1,.. 
     }));
   }
 
