@@ -1,6 +1,10 @@
 const About=()=>
     {
-        return(<div>hii</div>)
+        return(
+        <div>
+        
+            
+            </div>)
 
     }
 
