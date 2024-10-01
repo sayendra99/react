@@ -41,5 +41,7 @@ class UserClass extends React.Component {
  * 
  * Class Based Components will  use ComponentWillMount ,ComponentDidMount(),ComponentWillUpdate() and ComponentWillDelete()
  *  to fetch the API data like useEffect action in Functional Component
+ * 
+ * Class based Components are Out Dated mostly used in old projects
  */
 export default UserClass;
