@@ -35,7 +35,11 @@ class UserClass extends React.Component {
         <h4>Location: {Location}</h4>
       </div>
     );
-  }
+  }// Class Based Components are also able same as Functional Component to know the State As We already did now
 }
-
+/**
+ * 
+ * Class Based Components will  use ComponentWillMount ,ComponentDidMount(),ComponentWillUpdate() and ComponentWillDelete()
+ *  to fetch the API data like useEffect action in Functional Component
+ */
 export default UserClass;
