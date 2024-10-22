@@ -96,34 +96,64 @@
   background-color: #e55d00;
 }
 
-.shimmer-wrapper {
+.shimmer-container {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 16px; /* Space between shimmer cards */
 }
 
 .shimmer-card {
-  width: 300px;
-  height: 200px;
-  background: #f6f7f8;
-  background-image: linear-gradient(
-      to right,
-      #f6f7f8 0%,
-      #edeef1 20%,
-      #f6f7f8 40%,
-      #f6f7f8 100%
-  );
-  background-repeat: no-repeat;
-  background-size: 800px 200px;
-  animation: shimmer 1.5s infinite linear;
+  background: #f0f0f0; /* Background color for shimmer cards */
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-img {
+  height: 150px; /* Height of the image placeholder */
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-line {
+  height: 10px; /* Height of the text lines */
+  border-radius: 4px;
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  animation: shimmer 1.5s infinite;
+}
+
+.shimmer-line-1 {
+  width: 80%; /* Width of the first line */
+}
+
+.shimmer-line-2 {
+  width: 80px; /* Width of the second line */
+  margin: 8px 0; /* Space between lines */
+}
+
+.shimmer-line-3 {
+  width: 90%; /* Width of the third line */
 }
 
 @keyframes shimmer {
   0% {
-      background-position: -800px 0;
+    background-position: -1000px 0; /* Start from left */
   }
   100% {
-      background-position: 800px 0;
+    background-position: 1000px 0; /* Move to right */
   }
+}
+
+.no-results {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.no-results-image {
+  width: 150px; /* Adjust size as needed */
+  margin-bottom: 10px;
 }
 
 .log-btn {
