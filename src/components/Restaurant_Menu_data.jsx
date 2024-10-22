@@ -31,8 +31,7 @@ const  Restaurant_Menu_data=()=>
       return <div>Loading...</div>;
     }
   
-    return
-     (
+    return (
       <div className="restaurant-menu">
         <h1>{restaurantDetails.rest_name} Menu</h1>
         <p>City: {restaurantDetails.city}</p>
@@ -40,7 +39,7 @@ const  Restaurant_Menu_data=()=>
         <p>Review: {restaurantDetails.review}</p>
         <p>Preparation Time: {restaurantDetails.prep_time}</p>
         <img src={restaurantDetails.img_link} alt={restaurantDetails.rest_name} width="300px" />
-  
+    
         <h2>Menu Items:</h2>
         <ul>
           {menuItems.map((item, index) => (
@@ -48,9 +47,8 @@ const  Restaurant_Menu_data=()=>
           ))}
         </ul>
       </div>
-      
-    )
-
+    );
+ 
     
 }
 
