@@ -13,9 +13,7 @@
     
 //     }
 
-//     export default Restcomp|
 
-import { Link } from "react-router-dom";
 
 const Restcomp = (props) => {
   const handleCardClick = () => {
