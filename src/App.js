@@ -4,7 +4,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-
+import Restaurant_Menu_data from "./components/Restaurant_Menu_data";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
@@ -41,6 +41,10 @@ const appRouter = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "restaurant/:rest_name", // New route for restaurant menu
+        element: <Restaurant_Menu_data />,
       },
     ],
   },
