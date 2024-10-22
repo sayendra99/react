@@ -15,6 +15,8 @@
 
 //     export default Restcomp|
 
+import { Link } from "react-router-dom";
+
 const Restcomp = (props) => {
   const handleCardClick = () => {
     // Call the onSelect function with the restaurant data when clicked
@@ -34,9 +36,7 @@ const Restcomp = (props) => {
       <h4 className="Card-items">{props.Items.join(", ")}</h4>
       <h4>Rating: {props.review}</h4>
       <h4>Preparation Time: {props.prep_time}</h4>
-      <Link to={`/restaurant/${restaurant.rest_name}`}>
-        <button className="view-menu-button">View Menu</button>
-      </Link>
+      
 
     </div>
   );
