@@ -25,4 +25,4 @@ const NoResults = () => {
   );
 };
 
-export default Shimmer;
+export default {Shimmer,NoResults};
