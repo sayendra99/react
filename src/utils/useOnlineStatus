@@ -1,0 +1,9 @@
+import {useEffect,useState} from "react";
+// Custom hook 
+const useOnlineStatus=
+()=>
+    {
+        const [onlinestatus,Setonlinestatus]=useState(true);
+// our task if the web app is online it would loads all cards ,So to do like that we need to consider window's network status
+
+    }
