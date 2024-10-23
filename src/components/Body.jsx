@@ -4,6 +4,8 @@ import Shimmer from "./Shimmer"; // Import Shimmer component
 import rest_data from "../utils/mock"; // Mock restaurant data
 import SelectedRestaurant from "./SelectedRestaurant"; // Component to show selected restaurant details
 
+import useOnlineStatus from "../utils/useOnlineStatus";//component to track the user is in Online status Or Not
+
 const Body = () => {
   // State for storing all restaurants and filtered results
   const [restaurants, setRestaurants] = useState([]);
@@ -15,6 +17,9 @@ const Body = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   // State for storing the selected restaurant data
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+
+  const isOnline = useOnlineStatus();// Check online status using the custom hook
+
 
   useEffect(() => {
     // Simulate an API call
@@ -50,6 +55,16 @@ const Body = () => {
   const handleSelectRestaurant = (restaurant) => {
     setSelectedRestaurant(restaurant); // Set the selected restaurant state
   };
+
+
+  // Story Board Display for Offline Status
+  const storyBoardImages = [
+    "https://via.placeholder.com/400x300?text=Story+1",
+    "https://via.placeholder.com/400x300?text=Story+2",
+    "https://via.placeholder.com/400x300?text=Story+3",
+    "https://via.placeholder.com/400x300?text=Story+4",
+    "https://via.placeholder.com/400x300?text=Story+5",
+  ];
 
   return (
     <div className="Body">
