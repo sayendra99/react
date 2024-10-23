@@ -16,15 +16,21 @@
 
 
 const Restcomp = (props) => {
+  // const handleCardClick = () => {
+  //   // Call the onSelect function with the restaurant data when clicked
+  //   props.onSelect({
+  //     rest_name: props.rest_name,
+  //     img_link: props.img_link,
+  //     Items: props.Items,
+  //     review: props.review,
+  //     prep_time: props.prep_time
+  //   });
+  // };
+  const navigate = useNavigate();
+
   const handleCardClick = () => {
-    // Call the onSelect function with the restaurant data when clicked
-    props.onSelect({
-      rest_name: props.rest_name,
-      img_link: props.img_link,
-      Items: props.Items,
-      review: props.review,
-      prep_time: props.prep_time
-    });
+    // Navigate to the restaurant menu page
+    navigate(`/restaurant/${props.rest_name}`);
   };
 
   return (
