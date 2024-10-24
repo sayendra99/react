@@ -1,10 +1,10 @@
 {
   "name": "react",
   "version": "1.0.0",
-  "description": "this the react playground and used for learners",
+  "description": "this is the react playground used for learners",
   "scripts": {
     "test": "jest",
-    "start": "react-scripts start"
+    "start": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -28,8 +28,7 @@
     "axios": "^1.7.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2",
-    "react-scripts": "^3.0.1"
+    "react-router-dom": "^6.27.0"
   },
   "browserslist": [
     "last 2 versions",
