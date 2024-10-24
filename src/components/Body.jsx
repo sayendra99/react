@@ -4,7 +4,7 @@ import Shimmer from "./Shimmer"; // Import Shimmer component
 import rest_data from "../utils/mock"; // Mock restaurant data
 import SelectedRestaurant from "./SelectedRestaurant"; // Component to show selected restaurant details
 
-import useOnlineStatus from "../utils/useOnlineStatus";//component to track the user is in Online status Or Not
+import useOnlineStatus from "../utils/useOnlineStatus.js";//component to track the user is in Online status Or Not
 
 const Body = () => {
   // State for storing all restaurants and filtered results
@@ -59,11 +59,11 @@ const Body = () => {
 
   // Story Board Display for Offline Status
   const storyBoardImages = [
-    "https://via.placeholder.com/400x300?text=Story+1",
-    "https://via.placeholder.com/400x300?text=Story+2",
-    "https://via.placeholder.com/400x300?text=Story+3",
-    "https://via.placeholder.com/400x300?text=Story+4",
-    "https://via.placeholder.com/400x300?text=Story+5",
+    "https://media.gettyimages.com/id/1290300914/photo/boy-dressed-up-and-playing-cook-with-a-hat-and-blue-apron-holding-two-pepperoni-slices-as.jpg?s=2048x2048&w=gi&k=20&c=nfsFZYRCYPc50HrXwFuRyCi1WICjEGawEf8tD9sICHI=",
+    "https://media.gettyimages.com/id/52547662/photo/stephanie-myers-delivers-dominos-classic-cheeseburger-pizza-to-donald-trump.jpg?s=612x612&w=gi&k=20&c=M9ytHqxYMy2BywDZEP0Fyw__vaTMFnNdo3_PL-m6KCI=",
+    "https://media.istockphoto.com/id/518428978/vector/collection-of-delicious-indian-food.jpg?s=612x612&w=0&k=20&c=0kKvhIN74DMTdmWxDZ20_4R0VyRrbbXpDjlDT2sYGeg=",
+    "https://img.freepik.com/premium-photo/different-dishes-mexican-food-4k-hd-photo-background_1193781-10344.jpg",
+    "https://cdn.masto.host/sigmoidsocial/media_attachments/files/109/619/868/956/261/219/original/2418220374717b2d.png",
   ];
 
   return (
@@ -116,6 +116,24 @@ const Body = () => {
       ) : (
         <p>Please select a restaurant to see details.</p> // Message when no restaurant is selected
       )}
+
+
+<div className="offline-container">
+          <h2>You are offline!</h2>
+          <p>Check out these story boards:</p>
+          <div className="story-board">
+            {storyBoardImages.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt={`Story ${index + 1}`}
+                className="story-board-image"
+              />
+            ))}
+          </div>
+        </div>
+
+
     </div>
   );
 };
