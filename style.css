@@ -286,3 +286,24 @@
   top: 10px;
   right: 10px;
 }
+
+
+/* useOnlineStatus custom hook styles are added here and The header of code consist a div container */
+
+.offline-container {
+  text-align: center;
+}
+
+.story-board {
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.story-board-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
